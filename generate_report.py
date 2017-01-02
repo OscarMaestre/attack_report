@@ -59,6 +59,12 @@ def generate_report_by_country(conn):
     rows=conn.execute(sql)
     report=rows_to_table(["Country", "Total"],rows)
     return report
+
+def generate_report_by_city(conn):
+    sql="select country, city, count(*) as total from attacks group by country, city order by total desc limit 20;"
+    rows=conn.execute(sql)
+    report=rows_to_table(["Country", "City", "Total"],rows)
+    return report
     
     
 def generate_report():
@@ -66,6 +72,7 @@ def generate_report():
     generate_report_by_country(conn)
     report=""
     report+=generate_report_by_country(conn)
+    report+=generate_report_by_city(conn)
     print (HTML.format(report))
     conn.close()
     
