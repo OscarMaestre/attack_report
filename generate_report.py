@@ -71,9 +71,9 @@ def generate_report():
     conn=sqlite3.connect(ATTACKS)
     generate_report_by_country(conn)
     report=""
-    report+"<h3>By country</h3>"
+    report+="<h3>By country</h3>"
     report+=generate_report_by_country(conn)
-    report+"<h3>By city</h3>"
+    report+?"<h3>By city</h3>"
     report+=generate_report_by_city(conn)
     print (HTML.format(report))
     conn.close()
