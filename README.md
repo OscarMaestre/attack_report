@@ -1,5 +1,5 @@
 # attack_report
-A simple tool to generate an HTML of received attacks in a server
+A simple tool to generate an HTML of received attacks in a server (tested in Ubuntu Server 16.10)
 
 ##Prerequisites
 
