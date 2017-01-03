@@ -20,6 +20,7 @@ Building the attacks database:
     ./build.py
     
 Generating the report:
+
     ./generate_report > report.html
 
 
