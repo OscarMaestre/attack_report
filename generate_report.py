@@ -24,8 +24,13 @@ body,textarea,input,select{{background:0;border-radius:0;font:16px sans-serif;ma
     <div class="col c4"></div>
 </div>
 
-
-
+<center>
+This page uses the Min CSS framework. Check it! <a href="http://mincss.com/"></a>
+</center>
+<center>
+This product includes GeoLite2 data created by MaxMind, available from
+<a href="http://www.maxmind.com">http://www.maxmind.com</a>.
+</center>
 </body>
 </html>
 
