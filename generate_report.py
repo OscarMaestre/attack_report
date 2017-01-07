@@ -2,6 +2,8 @@
 
 
 import sqlite3
+from datetime import datetime
+
 from build_db import ATTACKS
 
 HTML="""
@@ -19,9 +21,7 @@ body,textarea,input,select{{background:0;border-radius:0;font:16px sans-serif;ma
 
 <div class="row">
 <h1>Attack report</h1>
-    <div class="col c4"> </div>
-    <div class="col c4">    {0} </div>
-    <div class="col c4"></div>
+    <div class="col c12">    {0} </div>
 </div>
 
 <center>
@@ -80,6 +80,8 @@ def generate_report():
     report+=generate_report_by_country(conn)
     report+="<h3>By city</h3>"
     report+=generate_report_by_city(conn)
+    now=datetime.now()
+    report+="<small>Last update {0}</small>".format(str(now))
     print (HTML.format(report))
     conn.close()
     
