@@ -1,13 +1,13 @@
 # attack_report
 A simple tool to generate an HTML of received attacks in a server (tested in Ubuntu Server 16.10)
 
-##Prerequisites
+## Prerequisites
 
 * Python 3
 * A version of MaxMind GeoLite2 City database (download at http://dev.maxmind.com/geoip/geoip2/geolite2/)
-* Python 3 bindings for MaxMind databases (pip3 install geolite2)
+* Python 3 bindings for MaxMind databases (pip3 install geolite2 or pip3 install geoip2)
 
-##Usage
+## Usage
 
 
 Edit build.py and modify:
